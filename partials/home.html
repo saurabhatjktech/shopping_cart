@@ -1,0 +1,23 @@
+<body>
+  <div ng-app="shoppingcartApp" ng-controller="PhoneListCtrl" >
+    <h1><center>Hot Deals</center></h1>
+    Search: <input ng-model="query">
+    Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+    <div class="container">
+     <div ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail col-md-6">
+       <div class="row">
+
+         <h1><center>{{phone.name}}</center></h1>
+         <h1><center>{{phone.offer}}</center></h1>
+         <a href="#/phones/{{phone.name}}"><img ng-src="{{phone.image}}" /></a>
+       </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+

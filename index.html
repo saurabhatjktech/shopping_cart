@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html ng-app="shoppingcartApp">
+  <head>
+    <meta charset="utf-8">
+    <!-- Set the viewport so this responsive site displays correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart App</title>
+    <!-- Include bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Site header -->
+    <header class="top" role="header">
+     <div class="navbar navbar-static-top navbar-custom ">
+      <div class="container" ui-view>
+       <div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" rel="home" href="#/home" title="Buy Each & Everyting">
+         <img style="max-width:50px; margin-top: -7px;"
+             src="img/shopping.jpeg">
+        </a>
+     </div>
+
+      <div class="col-sm-5 col-md-6 pull-center">
+      <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search any category or product" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form></div>
+            <a href="#" class="navbar-brand pull-right">
+                Sign Up | Log In
+            </a>
+
+        </div>
+       </div>
+      </div>
+       <br>
+          <nav class="container" >
+        <div class="navbar-inner">
+            <li class="dropdown">
+            <a href="#/home" class="navbar-brand pull-left">
+                Home
+            </a>
+            <div class="dropdown">
+          <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown">Electronics <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#/phones">Mobile</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Refrigerator</a></li>
+
+          </ul></div>
+
+          <div class="dropdown">
+          <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown">Life Style <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Men's Wear</a></li>
+            <li><a href="#">Women wear</a></li>
+            <li><a href="#">Kids</a></li>
+
+          </ul></div>
+
+          <div class="dropdown">
+          <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown">Home Style <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Home Appliances</a></li>
+            <li><a href="#">Spices</a></li>
+            <li><a href="#">grocessory</a></li>
+          </ul></div>
+
+          <div class="dropdown">
+          <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown">Sports <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Cricket</a></li>
+            <li><a href="#">Football</a></li>
+            <li><a href="#">Hockey</a></li>
+          </ul></div>
+
+          <div class="dropdown">
+          <a href="#" class="navbar-brand" class="dropdown-toggle" data-toggle="dropdown">Vehicles <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Bike</a></li>
+          </ul></div>
+
+          <a href="#" class="navbar-brand pull-left">
+                Contact Us
+            </a>
+
+         <a class="navbar-brand pull-right" rel="home" href="#" >
+          <img style="max-width:50px; margin-top: -7px;"
+             src="img/add-to-cart-dark.png">
+         </a>
+         </li>
+         </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+      <div class="container">
+         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+         <!-- Carousel indicators -->
+
+         <ol class="carousel-indicators">
+
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+
+         </ol>
+
+         <!-- Carousel items -->
+
+         <div class="carousel-inner">
+
+            <div class="item active">
+
+                <h2>Slide 1</h2>
+
+                <div class="carousel-caption">
+
+                  <h3>First slide label</h3>
+
+                  <p>Lorem ipsum dolor sit amet consectetur…</p>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <h2>Slide 2</h2>
+
+                <div class="carousel-caption">
+
+                  <h3>Second slide label</h3>
+
+                  <p>Aliquam sit amet gravida nibh, facilisis gravida…</p>
+
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <h2>Slide 3</h2>
+
+                <div class="carousel-caption">
+
+                  <h3>Third slide label</h3>
+
+                  <p>Praesent commodo cursus magna vel…</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Carousel nav -->
+
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+
+            <span class="glyphicon glyphicon-chevron-left"></span>
+
+        </a>
+
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+
+            <span class="glyphicon glyphicon-chevron-right"></span>
+
+        </a>
+    </div></div></div>
+
+    <div ng-view ></div>
+
+    <!-- Include jQuery and bootstrap JS plugins -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="jquery/jquery-2.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<body>
+  <div ng-app="shoppingcartApp" ng-controller="PhoneDetailCtrl" >
+    <h1><center>Brand Details</center></h1>
+    Search: <input ng-model="query">
+    Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+    <div class="container">
+      <div ng-repeat="nex in phones | filter:query | orderBy:orderProp" class="thumbnail col-md-4">
+
+          <h1><center>{{nex.name}}</center></h1>
+          <h1><center>{{nex.cost | currency:"&#8377;"}}</center></h1>
+          <a href=""><img ng-src="{{nex.image}}" /></a><br>
+          <button class="btn btn-primary center-block" >Buy Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
